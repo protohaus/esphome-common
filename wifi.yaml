@@ -1,0 +1,19 @@
+wifi:
+  ssid: !secret wifi_ap_ssid
+  password: !secret wifi_ap_pw
+  
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "$device_name_upper AP"
+    password: !secret esphome_fallback_ap_pw
+  
+  fast_connect: true
+
+    
+captive_portal:
+
+sensor:
+  - platform: wifi_signal
+    name: "${device_name_upper}.wifi_signal"
+    id: ${device_name}_wifi_signal
+    update_interval: 60s
