@@ -1,4 +1,4 @@
 # Enable Home Assistant API
 api:
-  reboot_timeout: 2min
+  reboot_timeout: ${api_reboot_timeout}
   password: !secret esphome_api_pw
