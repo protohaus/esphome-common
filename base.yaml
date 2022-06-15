@@ -3,3 +3,4 @@ packages:
   common_logger: !include logger.yaml
   common_preferences: !include preferences.yaml
   common_wifi: !include wifi.yaml
+  common_captive: !include captive_portal.yaml
